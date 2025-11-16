@@ -1,0 +1,20 @@
+body { font-family: sans-serif; background: #f8f8f8; }
+header, footer { text-align: center; margin: 1em 0; }
+#board { display: inline-block; margin: 1em auto; }
+.row { display: flex; }
+.cell {
+    width: 36px; height: 36px;
+    border: 1px solid #ccc;
+    margin: 2px;
+    background: #fff;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+.cell.invalid { background: transparent; border: none; cursor: default; }
+.cell.peg { background: #3498db; }
+.cell.empty { background: #eee; }
+.cell.selected { box-shadow: 0 0 0 3px #f39c12 inset; }
+.cell.movable { background: #a3e635; }
+button#reset { margin: 1em; padding: 0.5em 1.5em; font-size: 1em; }
